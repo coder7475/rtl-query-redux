@@ -7,7 +7,7 @@ const baseApi = createApi({
     }),
     endpoints: (builder) => ({
         getPokemonByName: builder.query({
-            query: (name) => `pokemon/${name}`
+            query: (name: string) => `pokemon/${name}`
         })
     }),
 })
