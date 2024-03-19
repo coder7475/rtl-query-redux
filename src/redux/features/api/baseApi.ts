@@ -12,4 +12,6 @@ const baseApi = createApi({
     }),
 })
 
+export const { useGetPokemonByNameQuery } = baseApi;
+
 export default baseApi;
