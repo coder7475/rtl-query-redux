@@ -1,14 +1,12 @@
-import './App.css'
+import "./App.css";
+import Feed from "./pages/Feed";
 
 function App() {
-
   return (
     <>
-     
-      <h1 className="text-5xl">News Feed</h1>
-      
+      <Feed />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
