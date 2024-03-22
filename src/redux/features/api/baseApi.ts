@@ -8,6 +8,12 @@ const baseApi = createApi({
     endpoints: (builder) => ({
         getPosts: builder.query({
             query: () => `/posts`
+        }),
+        getUsers: builder.query({
+            query: () => '/users'
+        }),
+        getPostById: builder.query({
+            query: (id: number) => `/posts/${id}`
         })
     }),
 })
