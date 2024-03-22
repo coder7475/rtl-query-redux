@@ -2,7 +2,7 @@ import { useGetPostsQuery } from "../redux/features/api/baseApi";
 import { Post } from "../redux/interfaces/post";
 
 const Feed = () => {
-  const { data: posts, isLoading, error, isError } = useGetPostsQuery("");
+  const { data: posts, isLoading, isError } = useGetPostsQuery("");
 
   if (isLoading) {
     return <p className="text-5xl text-zinc-300">Loading...</p>
