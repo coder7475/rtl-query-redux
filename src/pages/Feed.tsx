@@ -1,16 +1,19 @@
-import { useGetPostsQuery, useSetPostMutation } from "../redux/features/api/baseApi";
+import {
+  useGetPostsQuery,
+  // useSetPostMutation,
+} from "../redux/features/api/baseApi";
 import { Post } from "../redux/interfaces/post";
 
 const Feed = () => {
   const { data: posts, isLoading, isError } = useGetPostsQuery("");
-  const [setPost, { data:postData}] = useSetPostMutation();
+  // const [setPost, { data:postData}] = useSetPostMutation();
 
   if (isLoading) {
-    return <p className="text-5xl text-zinc-300">Loading...</p>
+    return <p className="text-5xl text-zinc-300">Loading...</p>;
   }
 
   if (!isLoading && isError) {
-    return <p className="text-5xl text-zinc-300">SomeThing Went wrong</p>
+    return <p className="text-5xl text-zinc-300">SomeThing Went wrong</p>;
   }
 
   return (
